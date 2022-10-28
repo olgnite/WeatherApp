@@ -9,7 +9,7 @@
 /.firebase
 /.vscode
 /.angular
-/.WeatherApplication
+/WeatherApplication/Weather
 # Node
 /node_modules
 npm-debug.log
