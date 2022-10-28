@@ -1,0 +1,86 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <div class="form">
+        <div class="container-map">
+            <ng-container *ngIf="weather else map">
+                <div class="temp-data">
+                    <img src="../assets/hot.png" *ngIf="weather.temp > 15"/>
+                    <img src="../assets/cold.png" *ngIf="weather.temp <= 15"/>
+                </div>
+                <ya-map [center]="[coordinates.latitude, coordinates.longitude]" [zoom]="12" *ngIf="weather else map">
+                    <ya-placemark [geometry]="[coordinates.latitude, coordinates.longitude]"></ya-placemark>
+                </ya-map>
+            </ng-container>
+        </div>
+        <div class="container-form-map">
+            <div class="form-container">
+                <div class="container-input">
+                    <div class="search">
+                        <div class="input-latitude">
+                            <label class="label-latitude">Широта</label>
+                            <input class="latitude" type="text" placeholder="Введите широту" formControlName="latitude">
+                        </div>
+                        <div class="input-longitude">
+                            <label class="label-longitude">Долгота</label>
+                            <input class="longitude" type="text" placeholder="Введите долготу"
+                                   formControlName="longitude">
+                        </div>
+                        <div class="validation-latitude"
+                             *ngIf="form.controls['latitude'].touched && form.controls['latitude'].invalid">
+                            <small *ngIf="form.controls['latitude'].errors['pattern']">
+                                Введите пожалуйста число
+                            </small>
+                        </div>
+                        <div class="validation-longitude"
+                             *ngIf="form.controls['longitude'].touched && form.controls['longitude'].invalid">
+                            <small *ngIf="form.controls['longitude'].errors['pattern']">
+                                Введите пожалуйста число
+                            </small>
+                        </div>
+                    </div>
+                </div>
+                <ng-container>
+                    <div class="widget-container">
+                        <div class="line-vertical-1">
+                        </div>
+                        <div class="line-vertical-2">
+                        </div>
+                        <div class="widget-block-1" *ngIf="weatherWidgets[0] as widget">
+                            <button class="btn-widget" (click)="removeWidget(weatherWidgets[0])">remove</button>
+
+                            <h3 style="padding: 10px; color: #fac742">{{ widget.temp }}°C</h3>
+                            <h3 style="padding: 10px; color: #fac742">{{ widget.wind }}m/s</h3>
+                            <h3 style="padding: 10px; color: #fac742">{{ widget.humidity }}%</h3>
+                        </div>
+                        <div class="widget-block-2" *ngIf="weatherWidgets[1] as widget">
+                            <button class="btn-widget" (click)="removeWidget(weatherWidgets[1])">remove</button>
+
+                            <h3 style="padding: 10px; color: #fac742">{{ widget.temp }}°C</h3>
+                            <h3 style="padding: 10px; color: #fac742">{{ widget.wind }}m/s</h3>
+                            <h3 style="padding: 10px; color: #fac742">{{ widget.humidity }}%</h3>
+                        </div>
+                        <div class="widget-block-3" *ngIf="weatherWidgets[2] as widget">
+                            <button class="btn-widget" (click)="removeWidget(weatherWidgets[2])">remove</button>
+
+                            <h3 style="padding: 10px; color: #fac742">{{ widget.temp }}°C</h3>
+                            <h3 style="padding: 10px; color: #fac742">{{ widget.wind }}m/s</h3>
+                            <h3 style="padding: 10px; color: #fac742">{{ widget.humidity }}%</h3>
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+            <button class="btn" [disabled]="form.invalid || weatherWidgets.length === 3">Показать погоду</button>
+            <div class="content">
+                <div class="temperature-map">
+                    {{ weather.temp }}°C
+                </div>
+            </div>
+            <div class="line">
+            </div>
+        </div>
+    </div>
+</form>
+<ng-template #map>
+    <div class="map-data">
+        <img src="../assets/map.png">
+    </div>
+</ng-template>

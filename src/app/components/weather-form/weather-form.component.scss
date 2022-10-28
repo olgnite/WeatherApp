@@ -1,0 +1,194 @@
+.latitude {
+
+}
+
+.temperature-map {
+  position: absolute;
+  color: var(--white);
+  margin-left: 130px;
+  font-size: 4em;
+  text-align: center;
+  font-weight: 900;
+}
+
+.form {
+  margin-top: 195px;
+}
+
+.line {
+  position: absolute;
+  border-bottom: 1px solid #fac742;
+  width: 400px;
+  margin-top: 100px;
+}
+
+.widget-block-1 {
+  display: inline-block;
+  vertical-align: top;
+  white-space: normal;
+  position: absolute;
+  float: left;
+  margin-left: 3px;
+  margin-top: 50px;
+}
+
+.widget-block-2 {
+  display: inline-block;
+  vertical-align: top;
+  white-space: normal;
+  position: absolute;
+  float: left;
+  margin-left: 135px;
+  margin-top: 50px;
+}
+
+.widget-block-3 {
+  display: inline-block;
+  vertical-align: top;
+  white-space: normal;
+  position: absolute;
+  float: left;
+  margin-left: 270px;
+  margin-top: 50px;
+}
+
+.widget-container {
+  position: absolute;
+  margin-top: 100px;
+}
+
+.line-vertical-1 {
+  border-left: 1px solid #fac742;
+  position: absolute;
+  height: 169.5px;
+  margin-left: 133px;
+  margin-top: 43px;
+}
+
+.line-vertical-2 {
+  border-left: 1px solid #fac742;
+  position: absolute;
+  height: 169.5px;
+  margin-left: 266px;
+  margin-top: 43px;
+}
+
+.validation-latitude {
+  position: absolute;
+  color: #fac742;
+  margin-left: 3px;
+  margin-top: -5px;
+}
+
+.validation-longitude {
+  position: absolute;
+  color: #fac742;
+  margin-left: 200px;
+  margin-top: -5px;
+}
+
+.label-latitude {
+  color: white;
+  margin-left: 50px;
+}
+
+.label-longitude {
+  color: white;
+  margin-left: 260px;
+}
+
+.container-form-map {
+  width: 400px;
+  height: 389px;
+  margin-left: 400px;
+  margin-top: 1px;
+  margin-right: 700px;
+  background-color: var(--blue-2);
+  box-shadow: 10px 10px 10px var(--shadow-dark);
+}
+
+.input-latitude {
+  margin-left: 1px;
+  margin-right: 700px;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.latitude input {
+  background-color: var(--shadow-light);
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  padding: 1em;
+  color: var(--grey-1);
+  font-size: 0.8em;
+  text-align: center;
+}
+
+.longitude {
+  margin-left: 200px;
+}
+
+.input-longitude {
+  margin-top: -75px;
+}
+
+.btn-widget {
+  margin-left: 1px;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  background-color: var(--shadow-light);
+  color: var(--grey-1);
+  padding: 1em;
+  text-align: center;
+  width: 90px;
+}
+
+.btn {
+  margin-left: 1px;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  background-color: var(--shadow-light);
+  color: var(--grey-1);
+  padding: 1em;
+  text-align: center;
+  width: 391px;
+}
+
+.map-data {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  margin-bottom: 2px;
+  height: 100%;
+  background-color: var(--shadow-dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.map-data img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 202%;
+  margin-top: -200px;
+}
+
+.temp-data {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.temp-data img {
+  margin-top: -195px;
+  width: 400px;
+  height: 195px;
+}
