@@ -10,6 +10,8 @@
 /.vscode
 /.angular
 /WeatherApplication/Weather/index.html
+/.firebaserc
+
 # Node
 /node_modules
 npm-debug.log
