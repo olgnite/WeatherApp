@@ -4,9 +4,11 @@
 -----------------
 ### Функции приложения
 - ### 1
-![image](https://user-images.githubusercontent.com/97447398/201089107-5b592c9c-424c-4863-94d8-2b12cba51a00.png)
-![image](https://user-images.githubusercontent.com/97447398/201090474-8b03fb08-f422-4b82-9361-59f91651f405.png)
 ![image](https://user-images.githubusercontent.com/97447398/201090390-b787877f-c1f7-427d-b13d-560a0f512ac8.png)
+![image](https://user-images.githubusercontent.com/97447398/201090474-8b03fb08-f422-4b82-9361-59f91651f405.png)
+![image](https://user-images.githubusercontent.com/97447398/201089107-5b592c9c-424c-4863-94d8-2b12cba51a00.png)
+
+
 
 - С помощью поля ввода можно узнать погоду в любом городе
 - При темпуратуре больше 15 градусов изменяется картинка
